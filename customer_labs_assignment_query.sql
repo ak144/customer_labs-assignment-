@@ -1,0 +1,5 @@
+SELECT event_name,count(event_name) FROM `placement-project-475407.01.ga4 public dataset` group by event_name LIMIT 1000;
+select event_params_key,event_params_value_string_value,count(event_params_value_string_value)from `placement-project-475407.01.ga4 public dataset` where event_params_key='page_location'group by event_params_value_string_value,event_params_key;
+select event_params_key,event_params_value_string_value,count(event_params_value_string_value),event_name from `placement-project-475407.01.ga4 public dataset` where event_params_key='page_title'group by event_params_value_string_value,event_params_key,event_name;
+SELECT event_name,count(event_name) FROM `placement-project-475407.01.ga4 public dataset`  where event_name='first_visit' group by event_name  LIMIT 1000;
+SELECT event_name,count(event_name) FROM `placement-project-475407.01.ga4 public dataset`  where event_name='user_engagement' group by event_name  LIMIT 1000;
